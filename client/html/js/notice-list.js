@@ -1,3 +1,7 @@
+Template.noticeList.created = function() {
+  Meteor.subscribe('all_notices');
+};
+
 Template.noticeList.helpers({
   notices: function() {
     return Notices.find({}, {sort: {like_count: -1}});
@@ -12,8 +16,7 @@ Template.noticeList.events({
       e.preventDefault();
 
       Notices.insert({
-        body: e.currentTarget.value,
-        like_count: 0
+        body: e.currentTarget.value
       }, function(err, res) {
         if (err)
           console.log(err.message);
