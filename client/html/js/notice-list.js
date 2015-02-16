@@ -31,5 +31,9 @@ Template.noticeList.events({
   },
   "click .delete": function(e) {
     Notices.remove(this._id);
+  },
+  "click .logout": function(e) {
+    e.preventDefault();
+    Meteor.logout();
   }
 });

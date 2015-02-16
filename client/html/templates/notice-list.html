@@ -1,9 +1,21 @@
 <template name="noticeList">
+  <header>
+    <h1>Notice Board
+      {{#if currentUser}}
+      <span class='logout'>(<a href="#">Log out</a>)</span>
+      {{/if}}
+    </h1>
+  </header>
+
   <ul>
     <li>
+      {{#if currentUser}}
       <form action="#">
         <input class="form-control add-notice" placeholder="Add new notice" type="text" value=""/>
       </form>
+      {{else}}
+      {{> loginButtons}}
+      {{/if}}
     </li>
 
 

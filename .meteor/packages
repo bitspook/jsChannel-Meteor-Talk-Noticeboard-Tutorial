@@ -7,3 +7,4 @@
 meteor-platform
 twbs:bootstrap
 accounts-password
+accounts-ui
