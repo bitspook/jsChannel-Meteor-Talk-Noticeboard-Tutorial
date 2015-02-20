@@ -31,6 +31,7 @@ Template.noticeList.events({
   },
   "click .delete": function(e) {
     Notices.remove(this._id);
+    Router.go('home');
   },
   "click .logout": function(e) {
     e.preventDefault();

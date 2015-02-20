@@ -21,7 +21,9 @@
 
     {{#each notices}}
     <li>
-      <span class="notice">{{body}}</span>
+      <span class="notice">
+        <a href="{{pathFor 'notice' id=_id}}">{{body}}</a>
+      </span>
       <span class="delete"><i class="glyphicon glyphicon-trash"></i></span>
       <span class="like ">
         <i class="glyphicon glyphicon-heart"></i>
